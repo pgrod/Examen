@@ -1,12 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace Examen
+﻿namespace Examen
 {
-    internal interface IAsignatura
+    public interface IAsignatura
     {
+        double CalcularNotaFinal();
+        double CalcularNotafinal(double N1, double N2, double N3);
+        string MensajeNotaFinal(double NotaFinal);
+        public void imprimir();
     }
 }
