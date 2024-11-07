@@ -31,32 +31,36 @@
         {
             if (NotaFinal >= 0 && NotaFinal <= 59)
             {
-                return "Reprobado";
+                return $"Nota final: {NotaFinal}% - Reprobado";
             }
             else if (NotaFinal >= 60 && NotaFinal <= 79)
             {
-                return "Bueno";
+                return $"Nota final: {NotaFinal}% - Bueno";
             }
             else if(NotaFinal >= 80 && NotaFinal <= 89)
             {
-                return "Muy Bueno";
+                return $"Nota final: {NotaFinal}% - Muy Bueno";
             }
             else
             {
-                return "Sobresaliente";
+                return $"Nota final: {NotaFinal}% - Sobresaliente";
             }
         }
 
         public void imprimir()
         {
+            Console.WriteLine("\n***********************************************************");
             Console.WriteLine($"Nombre del estudiante: {NombreAlumno}");
             Console.WriteLine($"Número de cuenta: {NumeroCuenta}");
             Console.WriteLine($"Correo electrónico: {Email}");
             Console.WriteLine($"Nombre de la clase: {NombreAsignatura}");
             Console.WriteLine($"Horario: {Horario}");
             Console.WriteLine($"Nombre del docente: {NombreDocente}");
-            Console.WriteLine($"Nota final: {CalcularNotaFinal} - {MensajeNotaFinal}");
-            Console.WriteLine($"Nota final: {CalcularNotafinal} - {MensajeNotaFinal}");
+            double NotaFinal = CalcularNotaFinal();
+            Console.WriteLine(MensajeNotaFinal(NotaFinal));
+            double notaFinal = CalcularNotafinal(N1,N2,N3);
+            Console.WriteLine(MensajeNotaFinal(notaFinal));
+            Console.WriteLine("\n***********************************************************");
         }
     }
 }
